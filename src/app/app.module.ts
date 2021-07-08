@@ -7,18 +7,22 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderSearchComponent } from './header-search/header-search.component';
 import { HeaderRegisterComponent } from './header-register/header-register.component';
 import { SideMenuComponent } from './side-menu/side-menu.component';
+import { DashboadrdContainerComponent } from './dashboadrd-container/dashboadrd-container.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderSearchComponent,
     HeaderRegisterComponent,
-    SideMenuComponent
+    SideMenuComponent,
+    DashboadrdContainerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
