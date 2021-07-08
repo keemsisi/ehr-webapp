@@ -19,7 +19,6 @@
 .serious-nurse-text {
     width: 207px;
     height: 38px;
-    font-family: Silka;
     font-style: normal;
     font-weight: 600;
     font-size: 32px;
@@ -38,7 +37,6 @@
     left: 763px;
     top: 174px;
     
-    font-family: Silka;
     font-style: normal;
     font-weight: 600;
     font-size: 50px;
@@ -50,7 +48,6 @@
 }
 
 .it-guy-m {
-    font-family: Silka;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
@@ -64,7 +61,6 @@
 }
 
 .it-guy-m2 {
-    font-family: Silka;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
@@ -79,7 +75,7 @@
 
 #signinbtn {
     width: 100%;
-    height: 40px;
+    height: 60px;
     background: #2C61E4;
     border-radius: 10px;
     border: none;
@@ -89,21 +85,21 @@
 #i-username {
     border-radius: 10px;
     height: 60px;
-    font-family: Silka;
     text-align: left;
     padding-left: 50px;
     padding-right: 50px;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
     margin-top: 5%;
 }
 
 #i-password {
     border-radius: 10px;
     height: 60px;
-    font-family: Silka;
     text-align: left;
     padding-left: 50px;
     padding-right: 50px;
-    margin-bottom: 5%;
+    margin-bottom: 1%;
     margin-top: 5%;
+    // background: url("/assets/images/Hide.png") no-repeat scroll 7px 7px;
+    padding-left:30px; 
 }
