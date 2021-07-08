@@ -1,1 +1,38 @@
-<p>dashboadrd-container works!</p>
+<div class="dashboard-container">
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse" style="height: 100vh;background-color: #1a2d41">
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element">
+                        <span class="text-muted text-xs block">TranscentCargo Admin Dashboard<br /><br /></span>
+                    </div>
+                    <div class="logo-element"> ADMIN_USERNAME
+                    </div>
+                </li>
+
+                <li>
+                    <a routerLink="/dashboard/overview">
+                        <i class="fa fa-archive"></i> 
+                        <span class="nav-label">Patient List</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a routerLink="/dashboard/bookings">
+                        <i class="fa fa-book"></i> 
+                        <span class="nav-label">Registter Patient</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- header -->
+
+    <!-- header End -->
+
+    <!-- dashboard-content start -->
+
+    <!-- dashboard-content end  -->
+    <router-outlet></router-outlet>
+</div>

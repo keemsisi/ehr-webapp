@@ -1,26 +1,43 @@
-
 <div class="login-conatiner" style="width: 100%; height:100vh">
     <div class="row">
-        <div class="col-sm-12 col-lg-6 col-md-6">
+        <div class="col-sm-12 col-lg-6 col-md-6" style="background-color: rgb(241, 241, 241)">
             <!-- shadow -->
-            <div>
-                <img src="/assets/images/shadow.png">
+            <div class="blur">
+                <img src="assets/images/shadow.png">
             </div>
             <!-- nurse -->
             <div>
-                <img src="/assets/images/serious-nurse.png">
-            </div>
-            <!--  text-->
-            <div>
-                <div>
-                    <p style="text-align: center;">Loren Epsalum</p><br>
-                    <p style="text-align: center;">Loren Another</p><br>                    
-                </div>
+                <img src="assets/images/serious-asian.png">
+                <p style="text-align: center;">Loren ipsum</p><br>
+                <p style="text-align: center;">Lorem ipsum dolor sit amet, <br> consectetur adipisc</p><br>
             </div>
         </div>
 
-        <div class="col-sm-12 col-lg-6 col-md-6">
 
+        <div class="col-sm-12 col-lg-6 col-md-6" style="margin-top: 10%;">
+            <h3>Sign in your <span>
+                    <div style="height:40px">
+                        EHR<img src="assets/images/ehrline.png" alt="">
+                    </div>
+                </span>
+                account
+            </h3>
+            <div class="container">
+                <form>
+                    <div style="width: 100%;">
+                        <input type="text" style="width: 100%" id="i-username" placeholder="Email">
+                    </div>
+                    <div style="width: 100%;">
+                        <input type="text" style="width: 100%" id="i-password" placeholder="Password">
+                    </div>
+                    <a [routerLink]="[ '/forgot-password' ]" class="">Don't have an account?</a>
+                    <button id="signinbtn" style="width: 100%; text-align: center;">Sign In</button>
+                    <h4>
+                        <span class="it-guy-m">Don't have an account?</span>
+                        <span class="it-guy-m">Meet up with the IT guys</span>
+                    </h4>
+                </form>
+            </div>
         </div>
     </div>
 </div>
