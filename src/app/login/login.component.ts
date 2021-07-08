@@ -21,4 +21,13 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void{
     
   }
+
+  changeEye(){
+    let password = window.document.getElementById("i-password");
+    if(password?.getAttribute("type") == "password"){
+      password?.setAttribute("type" , "text");
+    }else {
+      password?.setAttribute("type" , "password");
+    }
+  }
 }
