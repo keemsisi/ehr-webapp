@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard-container.component.scss']
 })
 export class DashboardContainerComponent implements OnInit {
-  profile_image: string = "";
+  profile_image: string = "assets/images/serious-asian.png";
   username: string = "";
   constructor() { }
 
