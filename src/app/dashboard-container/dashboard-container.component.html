@@ -1,0 +1,46 @@
+<style>
+    .sidenav {
+        width: 18%;
+        background-color: #06207A;
+        height: 100vh;
+        overflow-y: auto;
+    }
+
+    #dashoard-container {
+        /* background-color: white; */
+    }
+
+    .ehr-active-menu {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        width: 100%;
+    }
+</style>
+<!-- <div style="width: 20%; background-color: #06207A; height: 100vh; overflow-y: auto;"> -->
+
+<!-- </div> -->
+<div class="dashboard-container">
+    <nav class="sidenav">
+        <ul style="list-style: none;" class="col-lg-12 col-md-3 col-sm-12 ">
+            <img src="assets/images/blurwhite.png" class="container" style="margin-top:20%; margin-bottom: 20%;">
+
+            <li style="margin-top:10% ; margin-bottom:10%" class="ehr-active-menu">
+                <a routerLink="/dashboard/overview" style="text-decoration: none;">
+                    <img src="assets/images/3user.png" style="margin: 6%;">
+                    <span class="nav-label">Register Patient</span>
+                </a>
+            </li>
+
+            <li style="margin-top:10% ; margin-bottom:10%">
+                <a routerLink="/dashboard/overview" style="text-decoration: none;">
+                    <img src="assets/images/add-user.png" style="margin: 6%">
+                    <span class="nav-label">Patient List</span>
+                </a>
+            </li>
+        </ul>
+        <!-- All the routing goes here -->
+        <div class="col-lg-12 col-md-8 col-sm-12">
+            <router-outlet></router-outlet>
+        </div>
+    </nav>
+</div>

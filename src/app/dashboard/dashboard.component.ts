@@ -1,5 +1,5 @@
 import { HttpErrorResponse } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, ComponentFactoryResolver, ElementRef, Injector, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { PatientModel } from '../Model/patient.model';
 import { CustomHttpClientService } from '../Services/custom-http-client.service';
@@ -10,11 +10,17 @@ import { CustomHttpClientService } from '../Services/custom-http-client.service'
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  patients: PatientModel[] =  [];
+  patients: PatientModel[] = [];
+  header1: boolean = true;
+  // @ViewChild('sideNav', { read: ViewContainerRef, static: true })
+  // private sideNav: ViewContainerRef = new ElementRef();
 
-
-  constructor(private httpClient: CustomHttpClientService, private fb: FormBuilder) {}
-  ngOnInit(): void {
+  constructor(private httpClient: CustomHttpClientService, private fb: FormBuilder,
+    private inj: Injector, private resolver: ComponentFactoryResolver) { }
+  async ngOnInit() {
+    // const { SideMenuComponent } = await import('../side-menu/side-menu.component');
+    // const centerContainerFactory = this.resolver.resolveComponentFactory(SideMenuComponent);
+    // this.sideNav.createComponent(centerContainerFactory, undefined, this.inj);
   }
 
   public getAllPatients() {
@@ -28,5 +34,5 @@ export class DashboardComponent implements OnInit {
       });
     }, 5000);
   }
-  
+
 }
