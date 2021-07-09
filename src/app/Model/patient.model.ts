@@ -4,4 +4,5 @@ export class PatientModel {
     "phone": string;
     "gender": string;
     "address": string;
+    "profileImage": string;
 }

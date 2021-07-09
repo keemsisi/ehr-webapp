@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { LoginRoutingModule } from './login-routing.module';
 import { LoginComponent } from './login.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {ReactiveFormsModule } from '@angular/forms';
 import { CustomHttpClientService } from '../Services/custom-http-client.service';
 
 
@@ -14,8 +14,7 @@ import { CustomHttpClientService } from '../Services/custom-http-client.service'
   imports: [
     CommonModule,
     LoginRoutingModule,
-    ReactiveFormsModule,
-    FormsModule
+    ReactiveFormsModule
   ],
   providers: [CustomHttpClientService]
 })
