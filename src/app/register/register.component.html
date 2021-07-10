@@ -48,7 +48,7 @@
 </div>
 <div id="steps" class="steps">
     <ng-container *ngIf="step==1">
-        <form class="row" style="margin-top: 5%;" [formGroup]="newPatient" >
+        <form class="row" style="margin-top: 5%;" [formGroup]="newPatient">
             <div class="col-sm-12 col-lg-4 col-md-4"
                 style="background-image: url(assets/images/pixbackground.png); background-repeat: no-repeat">
                 <img src="assets/images/default-image.png"
@@ -72,22 +72,22 @@
                 </select>
 
                 <input class="col-sm-12 col-lg-4 col-md-4" type="text" class="ehr-input-text"
-                    style="width:280px;margin-bottom: 5%; margin-left: 2%;" placeholder="Patien Surname">
+                    style="width:40%;margin-bottom: 5%; margin-left: 2%;" placeholder="Patien Surname">
 
                 <input class="col-sm-12 col-lg-4 col-md-4" type="text" class="ehr-input-text"
-                    style="width:280px;margin-bottom: 5%;" placeholder="Patient Midle Name">
+                    style="width:40%;margin-bottom: 5%;" placeholder="Patient Midle Name">
 
                 <input class="col-sm-12 col-lg-4 col-md-4" type="text" class="ehr-input-text"
-                    style="width:280px; margin-bottom: 7%;margin-left: 2%;" placeholder="Patient Phone Number">
+                    style="width:50%;margin-bottom: 5%; margin-left:2%" placeholder="Patient Midle Name">
 
                 <input class="col-sm-12 col-lg-4 col-md-4" type="text" class="ehr-input-text"
-                    style="width:280px; margin-bottom: 5%" placeholder="Patient Phone Number">
+                    style="width:40%;margin-bottom: 5%;" placeholder="Patient Midle Name">
 
                 <input class="col-sm-12 col-lg-4 col-md-4" type="text" class="ehr-input-text"
-                style="width:280px; margin-bottom: 7%;margin-left: 2%;" placeholder="Patient Phone Number">
+                    style="width:50%; margin-bottom: 7%;margin-left: 2%;" placeholder="Patient Phone Number">
 
                 <select class="col-sm-12 col-lg-4 col-md-4  ehr-input-text" placeholder="Gender"
-                    style="width:320px; margin-bottom: 5%; margin-right: 5%;">
+                    style="width:320px; margin-bottom: 5%;">
                     <option value="" selected="selected" disabled>Gender</option>
                     <option value="">Male</option>
                     <option value="">Female</option>
@@ -95,12 +95,12 @@
                 </select>
 
                 <input class="col-sm-12 col-lg-4 col-md-4" type="text" class="ehr-input-text"
-                    style="width:280px;margin-bottom: 5%; margin-right: 2%;" placeholder="Patien Surname">
+                    style="width:56%;margin-bottom: 5%; margin-right: 2%; margin-left:2%" placeholder="Patien Surname">
 
 
                 <div class="col-sm-12 col-lg-4 col-md-4" style="margin-top:2%">
                     <textarea class="ehr-input-text"
-                        style="width:500px; height:150px;padding-left: 30px; padding-top:20px;"
+                        style="width:500px; height:150px; padding-left: 30px; padding-top:20px;"
                         placeholder="Patient Address"></textarea>
                 </div>
             </div>
@@ -114,7 +114,19 @@
     </ng-container>
 
     <ng-container *ngIf="step==2">
-
+        <div class="row" style="margin-top: 5%;">
+            <select class="col-sm-12 col-lg-4 col-md-4 ehr-input-text" placeholder="Relationship">
+                <option value="" selected="selected" disabled>Sponsor Billing Policy</option>
+                <option value="">Billing Policy One</option>
+                <option value="">Billing Policy Two</option>
+            </select>
+        </div>
+        <div style="float:right" style="width: 100%; margin-left:55%">
+            <button class="ehr-btn ehr-default btn-back" (click)="previousStep()">Back
+            </button>
+            <button class="ehr-btn ehr-primary btn-continue" (click)="nextStep()">Continue
+            </button>
+        </div>
     </ng-container>
 
     <ng-container *ngIf="step==3">
@@ -160,7 +172,16 @@
     </ng-container>
 
     <ng-container *ngIf="step==4">
-
+        <div class="row" style="margin-top: 5%;">
+            <select class="col-sm-12 col-lg-4 col-md-4 ehr-input-text" placeholder="Relationship">
+                <option value="" selected="selected" disabled>Sponsor Billing Policy</option>
+                <option value="">Billing Policy One</option>
+                <option value="">Billing Policy Two</option>
+            </select>
+        </div>
+        <div style="float:right" style="width: 100%; margin-left:55%">
+            <button class="ehr-btn ehr-default btn-back" (click)="previousStep()">Back</button>
+            <button class="ehr-btn ehr-primary btn-continue" (click)="nextStep()">Register Patient</button>
+        </div>
     </ng-container>
-
 </div>
