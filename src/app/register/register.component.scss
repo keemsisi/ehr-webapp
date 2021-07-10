@@ -5,3 +5,52 @@
     overflow: hidden;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
 }
+.ehr-input-text {
+    overflow: hidden;
+    height: 60px;
+    border: 1px solid #E4E8F0;
+    box-sizing: border-box;
+    border-radius: 15px;
+    padding-left: 3%;
+    padding-right: 3%;
+    outline: none;
+}
+
+.ehr-btn {
+    height: 60px;
+    border: 10px solid #5E8CEE;
+    border: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: white;
+}
+
+.ehr-default {
+    color: #2C61E4;
+    font-weight: bold;
+    background-color: white;
+    border: 1px solid #5E8CEE;
+}
+.ehr-primary {
+    background: #2C61E4;
+    font-weight: bold;
+}
+
+.steps {
+    margin-left: 10%;
+}
+select > option {
+    // font-weight: bold;
+    color: #06207A;
+    font-size: 16px;
+}
+.btn-shadow {
+    box-shadow: 0px 12px 24px -5px rgba(44, 97, 228, 0.33);
+    border-radius: 8px;
+}
+
+select { 
+    // font-weight: bold;
+    color: #06207A;
+    font-size: 16px;
+}
