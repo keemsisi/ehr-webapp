@@ -3,9 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardContainerComponent } from './dashboard-container.component';
 
 const routes: Routes = [
-  { path: '', component: DashboardContainerComponent },
-  { path: 'patients', loadChildren: () => import('../patientslist/patientslist.module').then(m => m.PatientslistModule) }, 
-  { path: 'register', loadChildren: () => import('../register/register.module').then(m => m.RegisterModule) }, 
+  {
+    path: '', component: DashboardContainerComponent, children: [
+      { path: 'patients', loadChildren: () => import('../patientslist/patientslist.module').then(m => m.PatientslistModule) },
+      { path: 'register', loadChildren: () => import('../register/register.module').then(m => m.RegisterModule) }
+    ]
+  },
 ];
 
 @NgModule({
