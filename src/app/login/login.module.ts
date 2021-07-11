@@ -5,6 +5,7 @@ import { LoginRoutingModule } from './login-routing.module';
 import { LoginComponent } from './login.component';
 import {ReactiveFormsModule } from '@angular/forms';
 import { CustomHttpClientService } from '../Services/custom-http-client.service';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { CustomHttpClientService } from '../Services/custom-http-client.service'
   imports: [
     CommonModule,
     LoginRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
   ],
   providers: [CustomHttpClientService]
 })
