@@ -265,7 +265,7 @@
         </div>
     </ng-container>
 </div>
-<div *ngIf="true" class="overlay" (click)="closeMessage()">
+<div *ngIf="showSuccessMessage" class="overlay" (click)="closeMessage()">
     <div class="container ehr-message-card">
         <p>Patient Registered Sucessfully</p>
         <button class="ehr-btn ehr-btn-primary" (click)="gotoPatients()">Done</button>

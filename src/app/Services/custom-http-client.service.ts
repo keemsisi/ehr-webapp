@@ -15,14 +15,10 @@ export class CustomHttpClientService {
   }
 
   createPatient(data: {}): Observable<PatientModel[]> {
-    return this.http.post<PatientModel[]>(`${this.staticURL}` + '/applicants/byusername/', data, {responseType: 'json'});
+    return this.http.post<PatientModel[]>(`${this.staticURL}` + '/patients', data, {responseType: 'json'});
   }
   
   getAllPatients(): Observable<PatientModel[]> {
     return this.http.get<PatientModel[]>(`${this.staticURL}/patients`, {responseType: 'json'});
-  }
-
-  authAdmin(cred : {}): Observable<any> {
-    return this.http.post(`${this.staticURL}` + '/applicants/byspNumber/', cred, {responseType: 'json'});
   }
 }

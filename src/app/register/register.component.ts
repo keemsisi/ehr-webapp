@@ -91,9 +91,7 @@ export class RegisterComponent implements OnInit {
         return Object.assign(r, a);
       }, {});
     this.http.createPatient(result).subscribe(data=>{
-      //view the overlay
-      this.showSuccessMessage = true ;
-
+      this.showSuccessMessage = true;
     }, (err : HttpErrorResponse)=> {
       alert("patient registration failed");
     })
