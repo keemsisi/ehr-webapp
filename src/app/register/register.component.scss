@@ -23,6 +23,7 @@
     border-radius: 10px;
     box-sizing: border-box;
     color: white;
+    outline: none;
 }
 
 .ehr-default {
@@ -37,7 +38,7 @@
 }
 
 .steps {
-    margin-left: 10%;
+    margin-left: 5%;
 }
 select > option {
     // font-weight: bold;
@@ -53,4 +54,19 @@ select {
     // font-weight: bold;
     color: #06207A;
     font-size: 16px;
+}
+
+.btn-back {
+    width: 100%;
+    text-align: center;
+    margin-top: 5%;
+    width: 200px;
+    margin-right: 3%;
+}
+
+.btn-continue {
+    width: 100%;
+    text-align: center;
+    margin-top: 5%;
+    width: 200px;
 }

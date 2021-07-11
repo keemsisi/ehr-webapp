@@ -1,3 +1,4 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -25,11 +26,22 @@ export class RegisterComponent implements OnInit {
   }
 
   nextStep() {
-    ++this.step;
+    if(this.step == 4){}
+    else{
+      ++this.step;
+    }
   }
 
   previousStep() {
     --this.step;
+  }
+
+  uploadProfilePicture(){
+
+  }
+
+  registerPatient(){
+    
   }
 
 }
