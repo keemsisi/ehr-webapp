@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
 const routes: Routes = [
   { path: 'dashboard', loadChildren: () => import('./dashboard-container/dashboard-container.module').then(m => m.DashboardContainerModule) }, 
   { path: '', loadChildren: () => import('./login/login.module').then(m => m.LoginModule) }, 
