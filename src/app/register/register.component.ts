@@ -1,6 +1,8 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { CustomHttpClientService } from '../Services/custom-http-client.service';
 
 @Component({
@@ -14,12 +16,12 @@ export class RegisterComponent implements OnInit {
   step2: FormGroup;
   step3: FormGroup;
   step4: FormGroup;
-  allStepValidated: boolean = false;
+  showSuccessMessage: boolean = false;
 
-  constructor(private fb: FormBuilder, private http: CustomHttpClientService) {
+  constructor(private fb: FormBuilder, private http: CustomHttpClientService , private router : Router) {
     this.step1 = this.fb.group({
       //step1 formgroup
-      title: ["", [Validators.required, Validators.minLength(4)]],
+      title: ["", [Validators.required]],
       surname: ["", [Validators.required, Validators.minLength(2)]],
       firstName: ["", [Validators.required, Validators.minLength(2)]],
       middleName: ["", [Validators.required, Validators.minLength(2)]],
@@ -42,17 +44,18 @@ export class RegisterComponent implements OnInit {
       localGoverment: ["", [Validators.required]],
       stateOfResidence: ["", [Validators.required]],
     });
-
+    
     this.step3 = this.fb.group({
-      fullName: ["", [Validators.required]],
-      relationship: ["", [Validators.required]],
+      nokName: ["", [Validators.required]],
+      nokRelationship: ["", [Validators.required]],
       nokPhone: ["", [Validators.required]],
       nokAddress: ["", [Validators.required]],
     });
 
     this.step4 = this.fb.group({
       sponsorBilling: ["", [Validators.required]]
-    })
+    });
+
   }
 
   ngOnInit(): void {
@@ -69,19 +72,30 @@ export class RegisterComponent implements OnInit {
     --this.step;
   }
 
-  uploadProfilePicture() {
-
+  uploadProfilePicture(){
+    //handle image upload
   }
 
-  registerPatient() {
+  gotoPatients() {
+    this.router.navigate(["/dashboard/patients"]);
+    this.showSuccessMessage = false ;
+  }
 
+  closeMessage() {
+    this.showSuccessMessage = false;
   }
 
   createPatient() {
-    let results = [this.step1 ,this.step2 , this.step3, this.step4],
-    result = results.reduce(function (r, a) {
+    let results = [this.step1, this.step2, this.step3, this.step4],
+      result = results.reduce(function (r, a) {
         return Object.assign(r, a);
-    }, {});
-    this.http.createPatient(result)
+      }, {});
+    this.http.createPatient(result).subscribe(data=>{
+      //view the overlay
+      this.showSuccessMessage = true ;
+
+    }, (err : HttpErrorResponse)=> {
+      alert("patient registration failed");
+    })
   }
 }

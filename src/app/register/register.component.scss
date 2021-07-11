@@ -24,17 +24,28 @@
     box-sizing: border-box;
     color: white;
     outline: none;
+    width: 200px;
+    text-align: center;
+    margin-top: 5%;
+    margin-right: 3%;
 }
 
-.ehr-default {
+.ehr-btn-default {
+    color: #c2c2c4;
+    font-weight: bold;
+    background-color: gray;
+
+}
+.ehr-btn-primary {
+    background-color: #2C61E4;
+    font-weight: bold;
+}
+
+.ehr-secondary {
     color: #2C61E4;
     font-weight: bold;
     background-color: white;
     border: 1px solid #5E8CEE;
-}
-.ehr-primary {
-    background: #2C61E4;
-    font-weight: bold;
 }
 
 .steps {
@@ -56,26 +67,12 @@ select {
     font-size: 16px;
 }
 
-.btn-back {
-    width: 100%;
-    text-align: center;
-    margin-top: 5%;
-    width: 200px;
-    margin-right: 3%;
-}
-
-.btn-continue {
-    width: 100%;
-    text-align: center;
-    margin-top: 5%;
-    width: 200px;
-}
 
 .overlay {
     position: fixed;
-    display: none; 
-    width: 40000px;
-    height: 400px;
+    display: block; 
+    width: 100vw;
+    height: 100vh;
     top: 0;
     left: 0;
     right: 0;
@@ -83,4 +80,31 @@ select {
     background-color: rgba(0,0,0,0.5); 
     z-index: 2; 
     cursor: pointer;
+}
+
+.ehr-message-card {
+    background: #FFFFFF;
+    border: 0.3px solid #B7B7B7;
+    box-sizing: border-box;
+    border-radius: 20px;
+    height: 40%;
+    margin-top: 10%;
+    width: 40%;
+}
+
+.ehr-message-card > p {
+    font-weight: 600;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #04194D;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 15%;
+}
+
+.ehr-message-card > button {
+    margin-left: 31%;
+    margin-right: 20%;
+    margin-top: 5%;
 }
