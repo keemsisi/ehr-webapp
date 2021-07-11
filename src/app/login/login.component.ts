@@ -33,6 +33,6 @@ export class LoginComponent implements OnInit {
   }
   
   dashboard(){
-    this.router.navigateByUrl('/dashboard/');
+    window.location.assign("#/dashboard/register");
   }
 }
