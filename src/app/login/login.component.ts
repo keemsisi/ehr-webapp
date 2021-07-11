@@ -33,6 +33,6 @@ export class LoginComponent implements OnInit {
   }
   
   dashboard(){
-    this.router.navigate(['dashboard/patients']);
+    this.router.navigate(['dashboard/register']);
   }
 }
