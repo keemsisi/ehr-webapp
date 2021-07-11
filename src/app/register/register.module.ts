@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { RegisterComponent } from './register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterRoutingModule } from './register-routing.module';
+import { CustomHttpClientService } from '../Services/custom-http-client.service';
 
 
 @NgModule({
@@ -15,6 +16,9 @@ import { RegisterRoutingModule } from './register-routing.module';
     RegisterRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+  ],
+  providers: [
+    CustomHttpClientService
   ]
 })
 export class RegisterModule { }

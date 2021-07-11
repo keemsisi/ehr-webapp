@@ -6,7 +6,7 @@ import { PatientModel } from '../Model/patient.model';
 
 @Injectable()
 export class CustomHttpClientService {
-  staticURL: String  = 'https://locahosthost:3000/';
+  staticURL: String  = 'http://3.17.179.140:3000';
   constructor(private http: HttpClient) {
   }
 
@@ -14,12 +14,12 @@ export class CustomHttpClientService {
     return this.http.post(`${this.staticURL}` + '/admin/logout', {token: token} , {responseType: 'json'});
   }
 
-  createPatient(data: string): Observable<PatientModel[]> {
+  createPatient(data: {}): Observable<PatientModel[]> {
     return this.http.post<PatientModel[]>(`${this.staticURL}` + '/applicants/byusername/', data, {responseType: 'json'});
   }
   
   getAllPatients(): Observable<PatientModel[]> {
-    return this.http.get<PatientModel[]>(`${this.staticURL}`, {responseType: 'json'});
+    return this.http.get<PatientModel[]>(`${this.staticURL}/patients`, {responseType: 'json'});
   }
 
   authAdmin(cred : {}): Observable<any> {
