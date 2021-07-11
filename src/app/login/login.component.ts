@@ -33,6 +33,6 @@ export class LoginComponent implements OnInit {
   }
   
   dashboard(){
-    this.router.navigateByUrl('/dashboard');
+    this.router.navigateByUrl('/dashboard/');
   }
 }

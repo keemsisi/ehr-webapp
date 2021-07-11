@@ -103,3 +103,26 @@
     // background: url("/assets/images/Hide.png") no-repeat scroll 7px 7px;
     padding-left:30px; 
 }
+
+.lorem2 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #797979;
+}
+
+.hide {
+    float: right;
+    margin-left: -40px;
+    margin-top: 45px;
+    position: absolute;
+    z-index: 2;
+}
+
+.hide:hover {
+    cursor: pointer;
+}
