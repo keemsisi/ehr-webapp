@@ -260,11 +260,12 @@
         <div style="float:right" style="width: 100%; margin-left:50%; margin-bottom: 5%">
             <button class="ehr-btn ehr-secondary " (click)="previousStep()">Back
             </button>
-            <button class="ehr-btn btn-continue" [disabled]="!step4.valid" [ngClass]="{'ehr-btn-default':step4.valid == false ,'ehr-btn-primary': step4.valid == true}" (click)="nextStep()">Continue
+            <button class="ehr-btn btn-continue" [disabled]="!step4.valid" [ngClass]="{'ehr-btn-default':step4.valid == false ,'ehr-btn-primary': step4.valid == true}" (click)="createPatient()">Continue
             </button>
         </div>
     </ng-container>
 </div>
+<!-- Overlay message -->
 <div *ngIf="showSuccessMessage" class="overlay" (click)="closeMessage()">
     <div class="container ehr-message-card">
         <p>Patient Registered Sucessfully</p>

@@ -18,7 +18,7 @@ export class RegisterComponent implements OnInit {
   step4: FormGroup;
   showSuccessMessage: boolean = false;
 
-  constructor(private fb: FormBuilder, private http: CustomHttpClientService , private router : Router) {
+  constructor(private fb: FormBuilder, private http: CustomHttpClientService, private router: Router) {
     this.step1 = this.fb.group({
       //step1 formgroup
       title: ["", [Validators.required]],
@@ -44,7 +44,7 @@ export class RegisterComponent implements OnInit {
       localGoverment: ["", [Validators.required]],
       stateOfResidence: ["", [Validators.required]],
     });
-    
+
     this.step3 = this.fb.group({
       nokName: ["", [Validators.required]],
       nokRelationship: ["", [Validators.required]],
@@ -53,7 +53,8 @@ export class RegisterComponent implements OnInit {
     });
 
     this.step4 = this.fb.group({
-      sponsorBilling: ["", [Validators.required]]
+      sponsorBilling: ["", [Validators.required]],
+      id : [""] //required for json-server
     });
 
   }
@@ -72,13 +73,13 @@ export class RegisterComponent implements OnInit {
     --this.step;
   }
 
-  uploadProfilePicture(){
+  uploadProfilePicture() {
     //handle image upload
   }
 
   gotoPatients() {
     this.router.navigate(["/dashboard/patients"]);
-    this.showSuccessMessage = false ;
+    this.showSuccessMessage = false;
   }
 
   closeMessage() {
@@ -86,13 +87,15 @@ export class RegisterComponent implements OnInit {
   }
 
   createPatient() {
-    let results = [this.step1, this.step2, this.step3, this.step4],
-      result = results.reduce(function (r, a) {
-        return Object.assign(r, a);
-      }, {});
-    this.http.createPatient(result).subscribe(data=>{
+    let results = [this.step1, this.step2, this.step3, this.step4];
+    let payload = results.reduce(function (r, a) {
+      return Object.assign(r, a);
+    }, {});
+    console.log(payload);
+    this.http.createPatient(payload).subscribe(data => {
       this.showSuccessMessage = true;
-    }, (err : HttpErrorResponse)=> {
+    }, (err: HttpErrorResponse) => {
+      console.log(err);
       alert("patient registration failed");
     })
   }
