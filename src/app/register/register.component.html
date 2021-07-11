@@ -117,11 +117,12 @@
                 <input class="col-sm-12 col-lg-4 col-md-4" type="text" class="ehr-input-text" formControlName="surname"
                     style="width:40%;margin-bottom: 5%; margin-left: 2%;" placeholder="Patien Surname">
 
-                <input class="col-sm-12 col-lg-4 col-md-4" type="text" class="ehr-input-text" formControlName="firstName"
-                    style="width:40%;margin-bottom: 5%;" placeholder="Patient Midle Name">
+                <input class="col-sm-12 col-lg-4 col-md-4" type="text" class="ehr-input-text"
+                    formControlName="firstName" style="width:40%;margin-bottom: 5%;" placeholder="Patient Midle Name">
 
-                <input class="col-sm-12 col-lg-4 col-md-4" type="text" class="ehr-input-text" formControlName="middleName"
-                    style="width:50%;margin-bottom: 5%; margin-left:2%" placeholder="Patient Midle Name">
+                <input class="col-sm-12 col-lg-4 col-md-4" type="text" class="ehr-input-text"
+                    formControlName="middleName" style="width:50%;margin-bottom: 5%; margin-left:2%"
+                    placeholder="Patient Midle Name">
 
                 <input class="col-sm-12 col-lg-4 col-md-4" type="text" class="ehr-input-text" formControlName="phone"
                     style="width:40%;margin-bottom: 5%;" placeholder="Patient Phone">
@@ -137,7 +138,7 @@
                     <option value="prefered not to say">Preferred Not to say</option>
                 </select>
 
-                <input class="col-sm-12 col-lg-4 col-md-4" type="text" class="ehr-input-text" formControlName="dob"
+                <input class="col-sm-12 col-lg-4 col-md-4" type="date" class="ehr-input-text" formControlName="dob"
                     style="width:56%;margin-bottom: 5%; margin-right: 2%; margin-left:2%" placeholder="DOB">
 
 
@@ -149,7 +150,9 @@
             </div>
         </form>
         <div style="margin-left: 80%; width: 100%; margin-bottom: 5%">
-            <button class="ehr-btn btn-continue" [disabled]="!step1.valid" [ngClass]="{'ehr-btn-default':step1.valid == false ,'ehr-btn-primary': step1.valid == true}" (click)="nextStep()">Continue
+            <button class="ehr-btn btn-continue" [disabled]="!step1.valid"
+                [ngClass]="{'ehr-btn-default':step1.valid == false ,'ehr-btn-primary': step1.valid == true}"
+                (click)="nextStep()">Continue
             </button>
         </div>
     </ng-container>
@@ -164,7 +167,8 @@
                 <option value="hausa">Hausa</option>
             </select>
 
-            <select class="col-sm-12 col-lg-3 col-md-3 ehr-input-text" style="margin-left: 2%;" formControlName="religion">
+            <select class="col-sm-12 col-lg-3 col-md-3 ehr-input-text" style="margin-left: 2%;"
+                formControlName="religion">
                 <option value="" selected="selected" disabled>Religion</option>
                 <option value="christian">Christian</option>
                 <option value="muslim">Muslim</option>
@@ -178,16 +182,17 @@
                 <option value="single">Single</option>
             </select>
 
-            <input class="col-sm-12 col-lg-3 col-md-3" type="text" class="ehr-input-text"
-                style="margin-top: 2%; margin-left: 2%;" placeholder="Occupation" formControlName="occupation">
+            <input class="col-sm-12 col-lg-3 col-md-3" type="text" class="ehr-input-text" style="margin-top: 2%;"
+                placeholder="Occupation" formControlName="occupation">
 
             <input class="col-sm-12 col-lg-3 col-md-3" type="text" class="ehr-input-text"
-                style="margin-top: 2%; margin-left: 2%;" placeholder="Blood Group"  formControlName="bloodGroup">
+                style="margin-top: 2%; margin-left: 2%;" placeholder="Blood Group" formControlName="bloodGroup">
 
             <input class="col-sm-12 col-lg-3 col-md-3" type="text" class="ehr-input-text"
                 style="margin-top: 2%; margin-left: 2%;" placeholder="Patient Type" formControlName="patientType">
 
-            <select class="col-sm-12 col-lg-3 col-md-3 ehr-input-text" style="margin-left: 2%; margin-top: 2%;" formControlName="natonality">
+            <select class="col-sm-12 col-lg-3 col-md-3 ehr-input-text" style="margin-left: 2%; margin-top: 2%;"
+                formControlName="natonality">
                 <option value="" selected="selected" disabled>Nationality</option>
                 <option value="christian">Nigerian</option>
                 <option value="muslim">Canadian</option>
@@ -195,21 +200,24 @@
                 <option value="pagan">Others</option>
             </select>
 
-            <select class="col-sm-12 col-lg-3 col-md-3 ehr-input-text" style="margin-left: 2%; margin-top: 2%;" formControlName="stateOfOrgin">
+            <select class="col-sm-12 col-lg-3 col-md-3 ehr-input-text" style="margin-top: 2%;"
+                formControlName="stateOfOrgin">
                 <option value="" selected="selected" disabled>State of Origin</option>
                 <option value="married">Ogun</option>
                 <option value="single">Lagos</option>
                 <option value="single">Ibadan</option>
             </select>
 
-            <select class="col-sm-12 col-lg-3 col-md-3 ehr-input-text" style="margin-left: 2%; margin-top: 2%;" formControlName="localGoverment">
+            <select class="col-sm-12 col-lg-3 col-md-3 ehr-input-text" style="margin-left: 2%; margin-top: 2%;"
+                formControlName="localGoverment">
                 <option value="" selected="selected" disabled>Local Government</option>
                 <option value="christian"></option>
                 <option value="muslim">Muslim</option>
                 <option value="pagan">Pagan</option>
             </select>
 
-            <select class="col-sm-12 col-lg-3 col-md-3 ehr-input-text" style="margin-left: 2%; margin-top: 2%;" formControlName="stateOfResidence">
+            <select class="col-sm-12 col-lg-3 col-md-3 ehr-input-text" style="margin-left: 2%; margin-top: 2%;"
+                formControlName="stateOfResidence">
                 <option value="" selected="selected" disabled>State of residence</option>
                 <option value="married">Ogun</option>
                 <option value="abuja">Abuja</option>
@@ -221,30 +229,41 @@
         <div style="float:right" style="width: 100%; margin-left:50%; margin-bottom: 5%">
             <button class="ehr-btn ehr-secondary " (click)="previousStep()">Back
             </button>
-            <button class="ehr-btn btn-continue" [disabled]="!step2.valid" [ngClass]="{'ehr-btn-default':step2.valid == false ,'ehr-btn-primary': step2.valid == true}" (click)="nextStep()">Continue
+            <button class="ehr-btn btn-continue" [disabled]="!step2.valid"
+                [ngClass]="{'ehr-btn-default':step2.valid == false ,'ehr-btn-primary': step2.valid == true}"
+                (click)="nextStep()">Continue
             </button>
         </div>
     </ng-container>
 
     <ng-container *ngIf="step==3">
         <form class="row" style="margin-top: 5%;" [formGroup]="step3">
-            <input type="text" class="col-sm-12 col-lg-4 col-md-4 ehr-input-text" style="width:30%"
-                placeholder="Full Name" formControlName="nokName">
-            <select class="col-sm-12 col-lg-4 col-md-4 ehr-input-text" formControlName="nokRelationship">
+
+            <input class="col-sm-12 col-lg-3 col-md-3" type="text" class="ehr-input-text"
+                style="margin-top: 2%; width: 25%" placeholder="Relationship" formControlName="nokName">
+
+            <select class="col-sm-12 col-lg-3 col-md-3 ehr-input-text" style="margin-top: 2%; margin-left: 2%;"
+                formControlName="nokRelationship">
                 <option value="" selected="selected" disabled>Relationship</option>
-                <option value="single">Single</option>
-                <option value="married">Married</option>
+                <option value="married">Family</option>
+                <option value="single">Friend</option>
+                <option value="single">Uncle</option>
             </select>
-            <input type="text" class="col-sm-12 col-lg-4 col-md-4 ehr-input-text" style="width:30%" formControlName="nokRelationship"
-                placeholder="Patient Phone Number" formControlName="nokPhone">
-            <textarea class="col-sm-12 col-lg-4 col-md-4 ehr-input-text" style="width:30%; height:100p; margin-top:4%" formControlName="nokAddress"
-                placeholder="Patient Address"></textarea>
+
+            <input class="col-sm-12 col-lg-3 col-md-3" type="text" class="ehr-input-text"
+                style="margin-top: 2%; margin-left: 2%; width: 30%" placeholder="Next of kin Phone" formControlName="nokPhone">
+
+            <textarea class="col-sm-12 col-lg-4 col-md-4 ehr-input-text"
+                style="width:60%; height:250px; margin-top:4%" formControlName="nokAddress"
+                placeholder="Next of kin Address"></textarea>
         </form>
 
         <div style="float:right" style="width: 100%; margin-left:50%; margin-bottom: 5%">
             <button class="ehr-btn ehr-secondary " (click)="previousStep()">Back
             </button>
-            <button class="ehr-btn btn-continue" [disabled]="!step3.valid" [ngClass]="{'ehr-btn-default':step3.valid == false ,'ehr-btn-primary': step3.valid == true}" (click)="nextStep()">Continue
+            <button class="ehr-btn btn-continue" [disabled]="!step3.valid"
+                [ngClass]="{'ehr-btn-default':step3.valid == false ,'ehr-btn-primary': step3.valid == true}"
+                (click)="nextStep()">Continue
             </button>
         </div>
     </ng-container>
@@ -260,7 +279,9 @@
         <div style="float:right" style="width: 100%; margin-left:50%; margin-bottom: 5%">
             <button class="ehr-btn ehr-secondary " (click)="previousStep()">Back
             </button>
-            <button class="ehr-btn btn-continue" [disabled]="!step4.valid" [ngClass]="{'ehr-btn-default':step4.valid == false ,'ehr-btn-primary': step4.valid == true}" (click)="createPatient()">Continue
+            <button class="ehr-btn btn-continue" [disabled]="!step4.valid"
+                [ngClass]="{'ehr-btn-default':step4.valid == false ,'ehr-btn-primary': step4.valid == true}"
+                (click)="createPatient()">Continue
             </button>
         </div>
     </ng-container>
