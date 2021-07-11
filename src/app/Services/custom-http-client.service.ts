@@ -6,7 +6,7 @@ import { PatientModel } from '../Model/patient.model';
 
 @Injectable()
 export class CustomHttpClientService {
-  staticURL: String  = 'https://3.17.179.140:3000';
+  staticURL: String  = 'http://3.17.179.140:3000';
   constructor(private http: HttpClient) {
   }
 
