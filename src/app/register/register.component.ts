@@ -60,8 +60,7 @@ export class RegisterComponent implements OnInit {
 
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   nextStep() {
     if (this.step == 4) { }
