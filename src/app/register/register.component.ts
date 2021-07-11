@@ -54,7 +54,8 @@ export class RegisterComponent implements OnInit {
 
     this.step4 = this.fb.group({
       sponsorBilling: ["", [Validators.required]],
-      id : [""] //required for json-server
+      id : [""], //required for json-server
+      profileImage : ["assets/images/user4.png"] //required for json-server
     });
 
   }
