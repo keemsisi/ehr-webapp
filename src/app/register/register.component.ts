@@ -87,10 +87,6 @@ export class RegisterComponent implements OnInit {
   }
 
   createPatient() {
-    // let results = [this.step1.value, this.step2.value, this.step3.value, this.step4.value];
-    // let payload = results.reduce(function (r, a) {
-    //   return Object.assign(r, a);
-    // }, {});
     this.http.createPatient({...this.step1.value , ...this.step2.value , ...this.step3.value , ...this.step4.value}).subscribe(data => {
       this.showSuccessMessage = true;
     }, (err: HttpErrorResponse) => {
